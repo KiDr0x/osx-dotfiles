@@ -1,0 +1,63 @@
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew cask install iterm2
+brew install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+upgrade_oh_my_zsh
+brew install htop
+brew install wget
+brew install vim
+brew install fzf
+brew install ansiweather
+brew install ngrep
+brew install ripgrep
+brew install proctools
+brew install coreutils
+brew install wireshark
+brew install git
+brew install gimp
+brew install vlc
+brew install keepassxc
+brew install discord
+brew install nmap
+brew install dropbox
+brew install alfred
+brew install agenda
+brew install balenaetcher
+brew insatll numi
+brew install telegram
+screenshot: lightshot
+docker: https://download.docker.com/mac/stable/Docker.dmg
+open yams file with aliases: alias -s {yml,yaml}=vim
+change hostname: sudo scutil --set HostName whatever-name-you-want
+sha256sum: sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
+sha512sum: sudo ln -s /usr/local/bin/gsha512sum /usr/local/bin/sha512sum
+ftp client: https://filezilla-project.org/download.php?type=client
+mail client: https://www.thunderbird.net/en-US/
+database tool: https://dbeaver.io/files/dbeaver-ce-latest-macos.dmg
+editor: https://code.visualstudio.com/download
+VM tool: https://www.virtualbox.org/wiki/Downloads
+pentest: burpsuite
+file sharing: https://apps.apple.com/us/app/shareit-connect-transfer/id1040029915?mt=12
+music player: https://www.spotify.com/download/mac/
+Mapping tool: https://www.xmind.net/download/
+VPN Client: https://tunnelblick.net/
+browser: https://www.mozilla.org/en-US/firefox/download/thanks/ && https://www.google.com/chrome/
+AV: malwarebytes && clamav
+panel: weatherbug && MenuMeters
+torrent client: µTorrent
+disk speed test: blackmagic
+
+/-/ Development
+Install Vuejs:
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
+nvm install node
+npm i -g vue-cli eslint
+vue init webpack hello-vue && cd hello-vue && npm i && npm run de
+
+
+
+
+
+
+
+ 
