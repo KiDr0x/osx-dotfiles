@@ -25,6 +25,7 @@ brew install agenda
 brew install balenaetcher
 brew insatll numi
 brew install telegram
+brew cask install tor-browser
 screenshot: lightshot
 docker: https://download.docker.com/mac/stable/Docker.dmg
 open yams file with aliases: alias -s {yml,yaml}=vim
