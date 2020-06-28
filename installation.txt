@@ -58,6 +58,9 @@ vue init webpack hello-vue && cd hello-vue && npm i && npm run de
 Xcode:
 xcode-select --install
 
+Database management:
+wget -c https://dbeaver.io/files/dbeaver-ce-latest-macos.dmg
+
 Python:
 brew install pyenv
 pyenv install 3.8.1
