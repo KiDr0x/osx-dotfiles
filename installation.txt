@@ -48,6 +48,10 @@ panel: weatherbug && MenuMeters
 torrent client: µTorrent
 disk speed test: blackmagic
 
+/-/ Tools
+brew tap cjbassi/ytop
+brew install ytop
+
 /-/ Development
 Vuejs:
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
