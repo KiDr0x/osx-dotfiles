@@ -51,6 +51,8 @@ disk speed test: blackmagic
 /-/ Tools
 brew tap cjbassi/ytop
 brew install ytop
+brew install wmcrtl
+brew install xdotool
 
 /-/ Development
 Vuejs:
