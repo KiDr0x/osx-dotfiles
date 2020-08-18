@@ -1,0 +1,149 @@
+env:
+  # TERM variable
+  #
+  # This value is used to set the `$TERM` environment variable for
+  # each instance of Alacritty. If it is not present, alacritty will
+  # check the local terminfo database and use `alacritty` if it is
+  # available, otherwise `xterm-256color` is used.
+  TERM: xterm-256color
+
+# Font configuration (changes require restart)
+font:
+  # The size to use.
+  size: 11.5
+  # The normal (roman) font face to use.
+  normal:
+    #family: FiraMono Nerd Font Mono
+    #family: Monofur for Powerline
+    family: Operator Mono
+    # Style can be specified to pick a specific face.
+    style: Light
+
+  # The bold font face
+  bold:
+    #family: Monofur for Powerline
+    family: Operator Mono
+    # Style can be specified to pick a specific face.
+    style: Bold
+
+  # The italic font face
+  italic:
+    #family: Monofur for Powerline
+    family: Operator Mono
+    # Style can be specified to pick a specific face.
+    style: Italic
+  bold_italic:
+    #family: Monofur for Powerline
+    family: Operator Mono
+      #family: Space Mono
+
+  offset:
+    x: 1
+    y: 1
+
+# Colors (Ayu Dark)
+#colors:
+#  # Default colors
+#  primary:
+#    background: '0x0A0E14'
+#    foreground: '0xB3B1AD'
+
+#  # Normal colors
+#  normal:
+#    black: '0x01060E'
+#    red: '0xEA6C73'
+#    green: '0x91B362'
+#    yellow: '0xF9AF4F'
+#    blue: '0x53BDFA'
+#    magenta: '0xFAE994'
+#    cyan: '0x90E1C6'
+#    white: '0xC7C7C7'
+
+  # Bright colors
+  #    bright:
+  #    black: '0x686868'
+  #  red: '0xF07178'
+  #  green: '0xC2D94C'
+  #  yellow: '0xFFB454'
+  #  blue: '0x59C2FF'
+  #  magenta: '0xFFEE99'
+  #  cyan: '0x95E6CB'
+  #  white: '0xFFFFFF'
+
+# Colors (iTerm 2 default theme)
+colors:
+  # Default colors
+  primary:
+    background: '#101421'
+    foreground: '#fffbf6'
+
+ # Normal colors
+  normal:
+    black:   '#2e2e2e'
+    red:     '#eb4129'
+    green:   '#abe047'
+    yellow:  '#f6c744'
+    blue:    '#47a0f3'
+    magenta: '#7b5cb0'
+    cyan:    '#64dbed'
+    white:   '#e5e9f0'
+
+ # Bright colors
+  bright:
+    black:   '#565656'
+    red:     '#ec5357'
+    green:   '#c0e17d'
+    yellow:  '#f9da6a'
+    blue:    '#49a4f8'
+    magenta: '#a47de9'
+    cyan:    '#99faf2'
+    white:   '#ffffff'
+
+# Background opacity
+#
+# Window opacity as a floating point number from `0.0` to `1.0`.
+# The value `0.0` is completely transparent and `1.0` is opaque.
+background_opacity: 0.99
+
+key_bindings:
+    # (Windows, Linux, and BSD only)
+  - { key: V,        mods: Control|Shift, action: Paste            }
+  - { key: C,        mods: Control|Shift, action: Copy             }
+    #- { key: P,        mods: Shift,         action: PasteSelection   }
+  - { key: Key0,     mods: Control,       action: ResetFontSize    }
+  - { key: Equals,   mods: Control,       action: IncreaseFontSize }
+  - { key: Add,      mods: Control,       action: IncreaseFontSize }
+  - { key: Subtract, mods: Control,       action: DecreaseFontSize }
+  - { key: Minus,    mods: Control,       action: DecreaseFontSize }
+
+  - { key: Paste,                    action: Paste                            }
+  - { key: Copy,                     action: Copy                             }
+  - { key: L,         mods: Control, action: ClearLogNotice                   }
+  - { key: L,         mods: Control, chars: "\x0c"                            }
+  - { key: PageUp,    mods: Shift,   action: ScrollPageUp,   mode: ~Alt       }
+  - { key: PageDown,  mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
+  - { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
+  - { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }
+
+  # MacOS support key bindings
+  # Close tab
+  - { key: W,        mods: Command,       chars: "\x01\x64"  }
+  # New tab
+  - { key: T,        mods: Command,       chars: "\x01\x63"  }
+  # Move to tab x.
+  - { key: Key1,     mods: Command,       chars: "\x01\x31" }
+  - { key: Key2,     mods: Command,       chars: "\x01\x32" }
+  - { key: Key3,     mods: Command,       chars: "\x01\x33" }
+  - { key: Key4,     mods: Command,       chars: "\x01\x34" }
+  - { key: Key5,     mods: Command,       chars: "\x01\x35" }
+  - { key: Key6,     mods: Command,       chars: "\x01\x36" }
+  - { key: Key7,     mods: Command,       chars: "\x01\x37" }
+  - { key: Key8,     mods: Command,       chars: "\x01\x38" }
+  - { key: Key9,     mods: Command,       chars: "\x01\x39" }
+  # split pane
+  - { key: D,        mods: Command,       chars: "\x01\x22" }
+  - { key: F,        mods: Command,       chars: "\x01\x25" }
+  # Fullscree mode
+  - { key: F11, command: { program: "fullscreen"  }  }
+  # rename session
+  - { key: R,       mods: Command,         chars: "\x01\x2c" }
