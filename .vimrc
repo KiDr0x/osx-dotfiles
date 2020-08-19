@@ -27,13 +27,17 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
 " Themes
-" Plugin 'dracula/vim', { 'name': 'dracula' }
+Plugin 'mhartington/oceanic-next'
 
-" Plugin 'flazz/vim-colorschemes'
+Plugin 'AlessandroYorba/Sierra'
 
-" Plugin 'sainnhe/sonokai'
+Plugin 'arcticicestudio/nord-vim'
 
-" Plugin 'morhetz/gruvbox'
+Plugin 'flazz/vim-colorschemes'
+
+Plugin 'sainnhe/sonokai'
+
+Plugin 'morhetz/gruvbox'
 
 " This is recommended for improved syntax highlighting for various languages
 Plugin 'sheerun/vim-polyglot'
@@ -42,13 +46,14 @@ Plugin 'scrooloose/syntastic'
 
 Plugin 'altercation/vim-colors-solarized'
 
-" Plugin 'tomasr/molokai'
+Plugin 'tomasr/molokai'
 
 Plugin 'stephpy/vim-yaml'
 
 Plugin 'Yggdroot/indentLine'
 
-Plugin 'kaicataldo/material.vim'
+" Plugin 'kaicataldo/material.vim'
+Plugin 'simonsmith/material.vim'
 
 " source: https://gist.github.com/Tset-Noitamotua/284a00212aa8a8d23e202c73526f6e9b
 "-------------------=== Languages support ===-------------------
@@ -149,7 +154,7 @@ augroup END
 " Show airline for tabs too
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='papercolor'
-
+"let g:airline_theme='oceanicnext'
 " air-line
 let g:airline_powerline_fonts = 1
 
@@ -205,15 +210,17 @@ set runtimepath+=~/.vim_runtime
 " Toggle this to "light" for light colorscheme
 set background=dark
 
-" Uncomment the next line if your terminal is not configured for solarized
+" Uncomment the next line if your terminal is not codarkred for solarized
 let g:solarized_termcolors=256
 
+set mouse=a
+
 " Set the colorscheme
-" colorscheme solarized
+"colorscheme nord
 " colorscheme onedark
-colorscheme material
-let g:material_terminal_italics = 1
-let g:material_theme_style = 'lighter'
+" colorscheme material
+"let g:material_terminal_italics = 1
+"let g:material_theme_style = 'palenight'
 
 " ----- airblade/vim-gitgutter settings -----
 " In vim-airline, only display "hunks" if the diff is non-zero
@@ -234,12 +241,6 @@ let g:easytags_suppress_ctags_warning = 1
 nmap <silent> <leader>b :TagbarToggle<CR>
 " Uncomment to open tagbar automatically whenever possible
 "autocmd BufEnter * nested :call tagbar#autoopen(0)
-
-
-" ----- airblade/vim-gitgutter settings -----
-" In vim-airline, only display "hunks" if the diff is non-zero
-let g:airline#extensions#hunks#non_zero_only = 1
-
 
 " ----- Raimondi/delimitMate settings -----
 "let delimitMate_expand_cr = 1
