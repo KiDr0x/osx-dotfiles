@@ -26,43 +26,49 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
-" Themes
-Plugin 'mhartington/oceanic-next'
+" =====================[Themes]===============================
+    Plugin 'mhartington/oceanic-next'
 
-Plugin 'AlessandroYorba/Sierra'
+    Plugin 'dikiaap/minimalist'
 
-Plugin 'arcticicestudio/nord-vim'
+    Plugin 'AlessandroYorba/Sierra'
 
-Plugin 'flazz/vim-colorschemes'
+    Plugin 'arcticicestudio/nord-vim'
 
-Plugin 'sainnhe/sonokai'
+    Plugin 'flazz/vim-colorschemes'
 
-Plugin 'morhetz/gruvbox'
+    Plugin 'sainnhe/sonokai'
 
-" This is recommended for improved syntax highlighting for various languages
-Plugin 'sheerun/vim-polyglot'
+    Plugin 'morhetz/gruvbox'
 
-Plugin 'scrooloose/syntastic'
+    Plugin 'tomasr/molokai'
 
-Plugin 'altercation/vim-colors-solarized'
+    "Plugin 'kaicataldo/material.vim'
 
-Plugin 'tomasr/molokai'
+    Plugin 'simonsmith/material.vim'
 
-Plugin 'stephpy/vim-yaml'
+    Plugin 'hardcoreplayers/oceanic-material'
 
-Plugin 'Yggdroot/indentLine'
+" ========[This is recommended for improved syntax highlighting for various languages]======
+    Plugin 'sheerun/vim-polyglot'
 
-" Plugin 'kaicataldo/material.vim'
-Plugin 'simonsmith/material.vim'
+    Plugin 'scrooloose/syntastic'
+
+    Plugin 'altercation/vim-colors-solarized'
+
+    Plugin 'stephpy/vim-yaml'
+
+    Plugin 'Yggdroot/indentLine'
+
 
 " source: https://gist.github.com/Tset-Noitamotua/284a00212aa8a8d23e202c73526f6e9b
-"-------------------=== Languages support ===-------------------
+"====================[Languages support]========================
     Plugin 'tpope/vim-commentary'               " Comment stuff out
     Plugin 'mitsuhiko/vim-sparkup'              " Sparkup(XML/jinja/htlm-django/etc.) support
     Plugin 'Rykka/riv.vim'                      " ReStructuredText plugin
     Plugin 'Valloric/YouCompleteMe'             " Autocomplete plugin
 
-"-------------------=== Snippets support ===--------------------
+"====================[Snippets support]=======================
     " Plugin 'garbas/vim-snipmate'                " Snippets manager
     Plugin 'MarcWeber/vim-addon-mw-utils'       " dependencies #1
     Plugin 'tomtom/tlib_vim'                    " dependencies #2
@@ -208,10 +214,10 @@ set runtimepath+=~/.vim_runtime
 
 " ----- altercation/vim-colors-solarized settings -----
 " Toggle this to "light" for light colorscheme
-set background=dark
+" set background=dark
 
 " Uncomment the next line if your terminal is not codarkred for solarized
-let g:solarized_termcolors=256
+"let g:solarized_termcolors=256
 
 set mouse=a
 
