@@ -16,6 +16,11 @@ export LDFLAGS="-L/usr/local/opt/libffi/lib"
 # For pkg-config to find libffi you may need to set:
 export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 
+# QT path and For pkg-config
+# qt is keg-only, which means it was not symlinked into /usr/local,
+# because Qt 5 has CMake issues when linked.
+export PATH="/usr/local/opt/qt/bin:$PATH"
+export PKG_CONFIG_PATH="/usr/local/opt/qt/lib/pkgconfig"
 
 # Golang path
 export GOROOT=/usr/local/go
@@ -229,11 +234,11 @@ alias breclean-cek="brew cleanup -n"
 alias bredoclist="brew docktor --list-checks"
 alias breci="brew cask install"
 alias brecu="brew cask upgrade"
-alias brecs="brew cask search"
+alias brecs="brew search --casks"
 alias bredep="brew deps"
 alias bredepi="brew deps --installed"
 
-alias pass-gen="openssl rand -base64 24 | colrm 32"
+alias pass-gen="openssl rand -base64 12 | colrm 32"
 #alias pass-gen="echo -n @ && cat /dev/urandom | env LC_ALL=C tr -dc 'A-Za-z0-9_!@#$%^&*()\-+=' | head -c 15 && echo"
 
 alias killsound='killall ControlStrip'
@@ -254,8 +259,8 @@ zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f
 alias kill-chrome="ps auxww | grep -i 'google chrome' | grep -v grep | awk '{ print $2 }' | xargs kill -9"
 
 # Firefox stuff
-#alias kill-ff="ps auxww | grep -i 'Firefox Developer Edition' | grep -v grep | awk '{ print $2 }' | xargs kill -9"
-alias kill-ff="sudo kill -9 `ps ax|grep 'firefox-developer-edition' | awk '{print $1}'`"
+alias kill-ff="ps auxww | grep -i 'Firefox Developer Edition' | grep -v grep | awk '{ print $2 }' | xargs kill -9"
+#alias kill-ff="sudo kill -9 `ps ax|grep 'firefox-developer-edition' | awk '{print $1}'`"
 
 # Get top proses eating cpu
 alias ps-cpu-usage="ps aux | sort -nr -k 3 | head -10"
