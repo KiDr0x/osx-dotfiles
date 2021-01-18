@@ -112,6 +112,7 @@ plugins=(
   oc
   zsh-completions
   history-substring-search
+  history-search-multi-word
 )
 autoload -U compinit && compinit
 
