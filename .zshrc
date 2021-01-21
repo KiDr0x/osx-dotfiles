@@ -447,3 +447,9 @@ alias v="vim"
 
 # Start tmux when terminal launched
 if [ "$TMUX" = ""  ]; then tmux new -s activity; fi
+
+# load function
+fpath=( ~/.config/zshfn "${fpath[@]}"  )
+autoload -Uz $fpath[1]/*(.:t)
+
+alias gen_cert_server="openssl req -new -x509 -keyout server.pem -out server.pem -days 365 -nodes"
