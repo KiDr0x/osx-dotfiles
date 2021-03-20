@@ -14,7 +14,7 @@ import:
 # Font configuration (changes require restart)
 font:
   # The size to use.
-  size: 10.5
+  size: 9.8
   # The normal (roman) font face to use.
   normal:
     #family: FiraMono Nerd Font Mono
