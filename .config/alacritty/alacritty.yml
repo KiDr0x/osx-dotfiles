@@ -1,104 +1,92 @@
+import:
+  - /Users/darman/.config/alacritty/themes/breeze.yml
+
 env:
-  # TERM variable
-  #
-  # This value is used to set the `$TERM` environment variable for
-  # each instance of Alacritty. If it is not present, alacritty will
-  # check the local terminfo database and use `alacritty` if it is
-  # available, otherwise `xterm-256color` is used.
   TERM: xterm-256color
 
+scrolling:
+  history: 20000
 
-import:
-    - ~/.config/alacritty/themes/dracula.yml
+  # Scrolling distance multiplier
+  multiplier: 3
 
-# Font configuration (changes require restart)
+# Font configuration
 font:
-  # The size to use.
-  size: 9.8
-  # The normal (roman) font face to use.
   normal:
-    #family: FiraMono Nerd Font Mono
-    #family: Monofur for Powerline
-    #family: Operator Mono
-    #family: Iosevka Nerd Font Mono
-    family: Inconsolata Nerd Font
-    # Style can be specified to pick a specific face.
-    #style: Light < for Operator Mono
+    family: Hack
     style: Regular
 
-  # The bold font face
   bold:
-    #family: Monofur for Powerline
-    #family: Operator Mono
-    #family: Iosevka Nerd Font Mono
-    family: Inconsolata Nerd Font
-    # Style can be specified to pick a specific face.
+    family: Hack
     style: Bold
 
-  # The italic font face
   italic:
-    #family: Monofur for Powerline
-    #family: Operator Mono
-    #family: Iosevka Nerd Font Mono
-    family: Inconsolata Nerd Font
-    # Style can be specified to pick a specific face.
+
+
+    family: Hack
     style: Italic
+
   bold_italic:
-    #family: Monofur for Powerline
-    #family: Operator Mono
-      #family: Space Mono
-      #family: Iosevka Nerd Font Mono
-    family: Inconsolata Nerd Font
+    family: Hack
+    style: Bold Italic
+
+  size: 10.8
 
   offset:
     x: 1
     y: 1
 
-# Background opacity
-#
-# Window opacity as a floating point number from `0.0` to `1.0`.
-# The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.99
+  # Thin stroke font rendering (macOS only)
+  #
+  # Thin strokes are suitable for retina displays, but for non-retina screens
+  # it is recommended to set `use_thin_strokes` to `false`.
+  use_thin_strokes: true
 
+# If `true`, bold text is drawn using the bright color variants.
+draw_bold_text_with_bright_colors: true
+
+# The bell is rung every time the BEL control character is received.
+bell:
+  animation: EaseOutExpo
+  duration: 300
+  color: '#ffffff'
+
+background_opacity: 1.0
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+  save_to_clipboard: true
+
+cursor:
+  style:
+    shape: Block
+    blinking: Always
+
+  # If this is `true`, the cursor will be rendered as a hollow box when the
+  # window is not focused.
+  unfocused_hollow: true
+
+# Live config reload (changes require restart)
+live_config_reload: true
+
+mouse:
+  double_click: { threshold: 300 }
+
+  hints:
+    launcher:
+      program: open
+    modifiers: Command
+
+# Map the keys (British keyboard layout)
+# https://clubmate.fi/alacritty
 key_bindings:
-    # (Windows, Linux, and BSD only)
-  - { key: V,        mods: Control|Shift, action: Paste            }
-  - { key: C,        mods: Control|Shift, action: Copy             }
-    #- { key: P,        mods: Shift,         action: PasteSelection   }
-  - { key: Key0,     mods: Control,       action: ResetFontSize    }
-  - { key: Equals,   mods: Control,       action: IncreaseFontSize }
-  - { key: Add,      mods: Control,       action: IncreaseFontSize }
-  - { key: Subtract, mods: Control,       action: DecreaseFontSize }
-  - { key: Minus,    mods: Control,       action: DecreaseFontSize }
-
-  - { key: Paste,                    action: Paste                            }
-  - { key: Copy,                     action: Copy                             }
-  - { key: L,         mods: Control, action: ClearLogNotice                   }
-  - { key: L,         mods: Control, chars: "\x0c"                            }
-  - { key: PageUp,    mods: Shift,   action: ScrollPageUp,   mode: ~Alt       }
-  - { key: PageDown,  mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
-  - { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
-  - { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }
-
-  # MacOS support key bindings
-  # Close tab
-  - { key: W,        mods: Command,       chars: "\x01\x64"  }
-  # New tab
-  - { key: T,        mods: Command,       chars: "\x01\x63"  }
-  # Move to tab x.
-  - { key: Key1,     mods: Command,       chars: "\x01\x31" }
-  - { key: Key2,     mods: Command,       chars: "\x01\x32" }
-  - { key: Key3,     mods: Command,       chars: "\x01\x33" }
-  - { key: Key4,     mods: Command,       chars: "\x01\x34" }
-  - { key: Key5,     mods: Command,       chars: "\x01\x35" }
-  - { key: Key6,     mods: Command,       chars: "\x01\x36" }
-  - { key: Key7,     mods: Command,       chars: "\x01\x37" }
-  - { key: Key8,     mods: Command,       chars: "\x01\x38" }
-  - { key: Key9,     mods: Command,       chars: "\x01\x39" }
-  # split pane
-  - { key: D,        mods: Command,       chars: "\x01\x22" }
-  - { key: F,        mods: Command,       chars: "\x01\x25" }
-  # Fullscree mode
-  - { key: F11, command: { program: "fullscreen"  }  }
-  # rename session
-  - { key: R,       mods: Command,         chars: "\x01\x2c" }
+  - { key: Key0, mods: Alt, chars: 'º' }
+  - { key: Key1, mods: Alt, chars: '¡' }
+  - { key: Key2, mods: Alt, chars: '€' }
+  - { key: Key3, mods: Alt, chars: '#' }
+  - { key: Key4, mods: Alt, chars: '¢' }
+  - { key: Key5, mods: Alt, chars: '∞' }
+  - { key: Key6, mods: Alt, chars: '§' }
+  - { key: Key7, mods: Alt, chars: '¶' }
+  - { key: Key8, mods: Alt, chars: '•' }
+  - { key: Key9, mods: Alt, chars: 'ª' }
