@@ -43,6 +43,8 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
     Plugin 'tomasr/molokai'
 
+    Plugin 'dracula/vim', { 'name': 'dracula'  }
+
     "Plugin 'kaicataldo/material.vim'
 
     Plugin 'simonsmith/material.vim'
@@ -60,6 +62,9 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
     Plugin 'Yggdroot/indentLine'
 
+    Plugin 'jaredgorski/spacecamp'
+
+    Plugin 'jiangmiao/auto-pairs'
 
 " source: https://gist.github.com/Tset-Noitamotua/284a00212aa8a8d23e202c73526f6e9b
 "====================[Languages support]========================
@@ -126,7 +131,6 @@ filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 filetype plugin on
 filetype on
-
 "
 " Brief help
 " :PluginList       - lists configured plugins
