@@ -2,12 +2,17 @@
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 export PATH="/usr/local/sbin:$PATH"
 
+export TERM=xterm-256color
+
 export LC_ALL=en_US.UTF-8
 
 export PYTHON_CONFIGURE_OPT="--enable-framework"
 
 # Rust cargo environment
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# Krew plugins path
+export PATH="${PATH}:${HOME}/.krew/bin"
 
 # libffi is keg-only, which means it was not symlinked into /usr/local,
 #because some formulae require a newer version of libffi.
@@ -29,6 +34,11 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 export DNS_DIAG="$HOME/Tools/Network/DNS/dnsdiag"
 export PATH="$DNS_DIAG:$PATH"
+
+# OpenJDK
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+# compilers to find openjdk you may need to set:
+export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/darman/.oh-my-zsh"
@@ -453,3 +463,10 @@ fpath=( ~/.config/zshfn "${fpath[@]}"  )
 autoload -Uz $fpath[1]/*(.:t)
 
 alias gen_cert_server="openssl req -new -x509 -keyout server.pem -out server.pem -days 365 -nodes"
+
+# Start to run podman
+#alias podman='podman --remote host vagrant@127.0.0.1 -p 2222'
+
+# Google Cloud SDK
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
