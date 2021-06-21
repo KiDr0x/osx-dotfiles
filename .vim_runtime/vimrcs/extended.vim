@@ -30,7 +30,8 @@ set guioptions-=L
 " Colorscheme
 set background=dark
 " colorscheme peaksea
-colorscheme oceanic_material
+" colorscheme oceanic_material
+colorscheme dracula
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
