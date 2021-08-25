@@ -456,7 +456,7 @@ alias c="pygmentize -O style=monokai -f console256 -g"
 alias v="vim"
 
 # Start tmux when terminal launched
-if [ "$TMUX" = ""  ]; then tmux new -s activity; fi
+#if [ "$TMUX" = ""  ]; then tmux new -s activity; fi
 
 # load function
 fpath=( ~/.config/zshfn "${fpath[@]}"  )
