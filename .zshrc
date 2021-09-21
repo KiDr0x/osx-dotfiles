@@ -215,13 +215,20 @@ alias wifi-restart="sudo ifconfig en0 down && sudo ifconfig en0 up"
 alias lan-restart="sudo ifconfig en1 down && sudo ifconfig en1 up"
 
 alias hm="cd ~"
-alias l="ls -lha"
-alias lfg="ls -aFG"
+#alias l="ls -lha"
+#alias lfg="ls -aFG"
 alias cls="clear"
 alias sshcfg="less ~/.ssh/config"
 alias ssh-start="sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist"
 alias ssh-stop="sudo launchctl unload /System/Library/LaunchDaemons/ssh.plist"
 alias con="ssh"
+
+# LSD
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
 
 # substring search
 bindkey "^P" history-substring-search-up
@@ -249,8 +256,9 @@ alias brecs="brew search --casks"
 alias bredep="brew deps"
 alias bredepi="brew deps --installed"
 
-alias pass-gen="openssl rand -base64 12 | colrm 32"
+#alias pass-gen="openssl rand -base64 12 | colrm 32"
 #alias pass-gen="echo -n @ && cat /dev/urandom | env LC_ALL=C tr -dc 'A-Za-z0-9_!@#$%^&*()\-+=' | head -c 15 && echo"
+alias pass-gen="cat /dev/urandom | env LC_ALL=C tr -dc 'A-Za-z0-9_!@#$%^&*()[\-+];.:{|}~<=>?' | head -c 24 && echo"
 
 alias killsound='killall ControlStrip'
 #alias killaudio='sudo killall coreaudiod'
