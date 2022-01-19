@@ -227,12 +227,15 @@ alias con="ssh"
 alias ls='lsd'
 alias l='ls -l'
 alias la='ls -a'
-alias lla='ls -la'
+alias lha='ls -lha'
 alias lt='ls --tree'
 
 # substring search
 bindkey "^P" history-substring-search-up
 bindkey "^N" history-substring-search-down
+
+bindkey -v
+bindkey "^R" history-incremental-search-backward
 
 # Flushing DNS cache
 alias dns-clean="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"
@@ -266,6 +269,10 @@ alias killsound='killall ControlStrip'
 alias killaudio="ps -ax | grep 'coreaudiod' | grep 'sbin' |awk '{print $1}'"
 
 alias hg='history | grep'
+# https://jorge.fbarr.net/2011/03/24/making-your-bash-history-more-efficient/
+HISTTIMEFORMAT="%h %d %H:%M:%S> "
+# ignoredups and ignorespace
+HISTCONTROL=ignoreboth
 
 # Make zsh know about hosts already accessed by SSH
 zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
@@ -461,7 +468,8 @@ alias cz="less ~/.zshrc"
 alias c="pygmentize -O style=monokai -f console256 -g"
 
 # Vim stuff
-alias v="vim"
+alias v="nvim"
+alias vim="nvim"
 
 # Start tmux when terminal launched
 #if [ "$TMUX" = ""  ]; then tmux new -s activity; fi
@@ -478,3 +486,11 @@ alias gen_cert_server="openssl req -new -x509 -keyout server.pem -out server.pem
 # Google Cloud SDK
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
+# Hide/show all desktop icons (useful when presenting)
+alias hide_desktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias show_desktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+# Hide/show hidden files in Finder
+alias hide_files="defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder"
+alias show_files="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder"
