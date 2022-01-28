@@ -51,7 +51,7 @@ bell:
   duration: 300
   color: '#ffffff'
 
-background_opacity: 1.0
+window.opacity: 1.0
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
