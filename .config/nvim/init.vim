@@ -60,12 +60,14 @@ if (has("termguicolors"))
  set termguicolors
 endif
 set background=dark
-colorscheme dracula
+colorscheme gruvbox
 
 set rtp+=/usr/local/opt/fzf
 
 " set python default path
 let g:python3_host_prog = '/usr/local/bin/python3'
+
+let g:coc_node_path = '/usr/local/bin/node'
 
 " reload nvim
 nnoremap <silent>sv :source $MYVIMRC<CR>
