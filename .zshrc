@@ -8,6 +8,12 @@ export LC_ALL=en_US.UTF-8
 
 export PYTHON_CONFIGURE_OPT="--enable-framework"
 
+# PHP
+export PATH="/usr/local/opt/php@7.4/bin:$PATH"
+export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
+export LDFLAGS="-L/usr/local/opt/php@7.4/lib"
+export CPPFLAGS="-I/usr/local/opt/php@7.4/include"
+
 # Rust cargo environment
 export PATH="$HOME/.cargo/bin:$PATH"
 
@@ -28,7 +34,7 @@ export PATH="/usr/local/opt/qt/bin:$PATH"
 export PKG_CONFIG_PATH="/usr/local/opt/qt/lib/pkgconfig"
 
 # Golang path
-export GOROOT=/usr/local/go
+export GOROOT="$(brew --prefix golang)/libexec"
 export GOPATH=$HOME/MyProject/Golang
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
@@ -472,7 +478,7 @@ alias v="nvim"
 alias vim="nvim"
 
 # Start tmux when terminal launched
-#if [ "$TMUX" = ""  ]; then tmux new -s activity; fi
+if [ "$TMUX" = ""  ]; then tmux new -s activity; fi
 
 # load function
 fpath=( ~/.config/zshfn "${fpath[@]}"  )
@@ -494,3 +500,5 @@ alias show_desktop="defaults write com.apple.finder CreateDesktop -bool true && 
 # Hide/show hidden files in Finder
 alias hide_files="defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder"
 alias show_files="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder"
+
+eval "$(starship init zsh)"
