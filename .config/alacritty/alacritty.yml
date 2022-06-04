@@ -1,8 +1,8 @@
 import:
-  - /Users/darman/.config/alacritty/themes/gruvbox-dark.yml
+  - /Users/darman/.config/alacritty/themes/ayu-dark.yml
 
 env:
-  TERM: xterm-256color
+  TERM: screen-256color
 
 scrolling:
   history: 20000
@@ -88,3 +88,4 @@ key_bindings:
   - { key: Key7, mods: Alt, chars: '¶' }
   - { key: Key8, mods: Alt, chars: '•' }
   - { key: Key9, mods: Alt, chars: 'ª' }
+  - { key: N, mods: Command, action: SpawnNewInstance }
