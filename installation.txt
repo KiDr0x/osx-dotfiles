@@ -69,6 +69,26 @@ for zsh users do:
 source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 curl -sS https://starship.rs/install.sh | sh
 
+Install dns crypt proxy:
+By default, dnscrypt-proxy runs on localhost (127.0.0.1), port 53,
+balancing traffic across a set of resolvers. If you would like to
+change these settings, you will have to edit the configuration file:
+  /opt/homebrew/etc/dnscrypt-proxy.toml
+
+To check that dnscrypt-proxy is working correctly, open Terminal and enter the
+following command. Replace en1 with whatever network interface you're using:
+
+  sudo tcpdump -i en1 -vvv 'port 443'
+
+You should see a line in the result that looks like this:
+
+ resolver.dnscrypt.info
+
+To restart dnscrypt-proxy after an upgrade:
+  sudo brew services restart dnscrypt-proxy
+Or, if you don't want/need a background service you can just run:
+  /opt/homebrew/opt/dnscrypt-proxy/sbin/dnscrypt-proxy -config /opt/homebrew/etc/dnscrypt-proxy.toml
+
 /-/ Development
 Vuejs:
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
