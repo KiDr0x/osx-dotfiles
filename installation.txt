@@ -57,6 +57,7 @@ disk speed test: blackmagic
 /-/ Fonts
 brew install --cask homebrew/cask-fonts/font-fira-code
 brew install --cask homebrew/cask-fonts/font-fira-code-nerd-font
+brew install --cask font-hack-nerd-font
 
 /-/ Tools
 brew tap cjbassi/ytop
