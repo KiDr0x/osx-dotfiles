@@ -101,7 +101,6 @@ npm i -g vue-cli eslint
 vue init webpack hello-vue && cd hello-vue && npm i && npm run de
 brew install node
 pip3 install paho-mqtt
-brew install pyenv
 
 Xcode:
 xcode-select --install
