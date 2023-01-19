@@ -31,6 +31,8 @@ brew install agenda
 brew install balenaetcher
 brew insatll numi
 brew install telegram
+brew install glances
+brew install telnet
 brew cask install tor-browser
 screenshot: lightshot
 docker: https://download.docker.com/mac/stable/Docker.dmg
@@ -65,6 +67,8 @@ brew install ytop
 brew install wmcrtl
 brew install xdotool
 brew install --cask google-cloud-sdk
+brew install websocat
+brew install
 for zsh users do:
 source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 curl -sS https://starship.rs/install.sh | sh
@@ -96,6 +100,8 @@ nvm install node
 npm i -g vue-cli eslint
 vue init webpack hello-vue && cd hello-vue && npm i && npm run de
 brew install node
+pip3 install paho-mqtt
+brew install pyenv
 
 Xcode:
 xcode-select --install
