@@ -69,6 +69,8 @@ brew install xdotool
 brew install --cask google-cloud-sdk
 brew install websocat
 brew install
+wget -c https://github.com/thomasnordquist/MQTT-Explorer/releases/download/v0.3.5/MQTT-Explorer-0.3.5.dmg
+
 for zsh users do:
 source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 curl -sS https://starship.rs/install.sh | sh
